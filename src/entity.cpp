@@ -2,12 +2,18 @@
 
 Entity::Entity(Controller * c, sf::Vector2f position)
 {
-    //ctor
+    controller = c;
+    this->position = position;
 }
 
 sf::Vector2f Entity::getPosition() const
 {
     return position;
+}
+
+Controller * Entity::getController()
+{
+    return controller;
 }
 
 void Entity::setPosition(sf::Vector2f position)
@@ -17,7 +23,7 @@ void Entity::setPosition(sf::Vector2f position)
 
 void Entity::setController(Controller * c)
 {
-    this->c = c;
+    controller = c;
 }
 
 Entity::~Entity()

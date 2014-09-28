@@ -17,13 +17,15 @@ class Entity
 
         sf::Vector2f getPosition() const;
         void setPosition(sf::Vector2f);
+        Controller * getController();
         void setController(Controller *);
         void move(sf::Vector2f);
 
         virtual string toString() const = 0;
+        virtual void update() = 0;
     private:
         sf::Vector2f position;
-        Controller * c;
+        Controller * controller;
 };
 
 #endif // ENTITY_H
