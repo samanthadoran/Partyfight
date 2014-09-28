@@ -12,8 +12,6 @@ class Controller
         virtual void doControls() = 0;
     protected:
         sf::Keyboard::Key currentControl;
-    private:
-
 };
 
 #endif // CONTROLLER_H

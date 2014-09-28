@@ -1,6 +1,6 @@
 #include "aicontroller.h"
 
-AIController::AIController() : Controller()
+AIController::AIController() : AutomatedController()
 {
 
 }

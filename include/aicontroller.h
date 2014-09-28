@@ -2,10 +2,10 @@
 #define AICONTROLLER_H
 #include <stdlib.h>
 #include <ctime>
-#include "../include/controller.h"
+#include "../include/automatedcontroller.h"
 
 
-class AIController : public Controller
+class AIController : public AutomatedController
 {
     public:
         AIController();
