@@ -1,0 +1,17 @@
+#ifndef PLAYER_H
+#define PLAYER_H
+
+#include "../include/entity.h"
+
+
+class Player : public Entity
+{
+    public:
+        Player(Controller *, sf::Vector2f);
+        virtual ~Player();
+
+        string toString() const;
+    private:
+};
+
+#endif // PLAYER_H
