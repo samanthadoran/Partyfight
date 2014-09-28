@@ -9,7 +9,6 @@ class ManualController : public Controller
     public:
         ManualController();
         virtual ~ManualController();
-        void getControls() const;
         void doControls();
     private:
 };

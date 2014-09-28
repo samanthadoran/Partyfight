@@ -9,6 +9,7 @@ void test(Entity * e)
 
 int main()
 {
+    srand(time(0));
     Player p(new ManualController(), sf::Vector2f(0, 0));
     NPC n(new AIController(), sf::Vector2f(5, 0));
 

@@ -5,11 +5,7 @@ ManualController::ManualController() : Controller()
     //ctor
 }
 
-void ManualController::getControls() const
-{
-
-}
-
+//This needs to catch an event somehow?
 void ManualController::doControls()
 {
 

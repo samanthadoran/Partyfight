@@ -5,6 +5,11 @@ Controller::Controller()
     //ctor
 }
 
+sf::Keyboard::Key Controller::getControls() const
+{
+    return currentControl;
+}
+
 Controller::~Controller()
 {
     //dtor
