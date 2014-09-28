@@ -10,6 +10,7 @@ class NPC : public Entity
         NPC(Controller *, sf::Vector2f);
         virtual ~NPC();
 
+        void update();
         string toString() const;
     private:
 };

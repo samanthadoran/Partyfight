@@ -5,6 +5,11 @@ Player::Player(Controller * c, sf::Vector2f position) : Entity(c, position)
     //ctor
 }
 
+void Player::update()
+{
+    getController()->getControls();
+}
+
 string Player::toString() const
 {
     std::stringstream s;

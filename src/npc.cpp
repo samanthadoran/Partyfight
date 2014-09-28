@@ -2,7 +2,12 @@
 
 NPC::NPC(Controller * c, sf::Vector2f position) : Entity(c, position)
 {
-    //ctor
+
+}
+
+void NPC::update()
+{
+    getController()->getControls();
 }
 
 string NPC::toString() const
@@ -11,7 +16,6 @@ string NPC::toString() const
     s << "Placeholder" << " is an NPC Entity with a position of: (" << getPosition().x << ", " << getPosition().y << ")";
     return s.str();
 }
-
 
 NPC::~NPC()
 {

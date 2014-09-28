@@ -10,6 +10,7 @@ class Player : public Entity
         Player(Controller *, sf::Vector2f);
         virtual ~Player();
 
+        void update();
         string toString() const;
     private:
 };
