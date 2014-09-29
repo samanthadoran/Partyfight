@@ -2,16 +2,18 @@
 #include "include/npc.h"
 #include <iostream>
 
-void test(Entity * e)
-{
-    std::cout << e->toString() << std::endl;
-}
+using std::vector;
 
 int main()
 {
     srand(time(0));
-    Player p(new ManualController(), sf::Vector2f(0, 0));
-    NPC n(new AIController(), sf::Vector2f(5, 0));
+
+    vector<Actor *> actors;
+    Player p(new ManualController(), sf::Vector2f(0, 0), "Sammi");
+    NPC n(new AIController(), sf::Vector2f(5, 0), "Number 5");
+
+    actors.push_back(&p);
+    actors.push_back(&n);
 
     // Create the main window
     sf::RenderWindow app(sf::VideoMode(800, 600), "SFML window");
@@ -34,11 +36,12 @@ int main()
         // Clear screen
         app.clear();
 
+        for(Entity * e: actors)
+            e->toString();
+
         // Update the window
         app.display();
     }
-    test(&p);
-    test(&n);
 
     return EXIT_SUCCESS;
 }
