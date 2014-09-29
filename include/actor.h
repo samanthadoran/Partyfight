@@ -1,8 +1,10 @@
 #ifndef ACTOR_H
 #define ACTOR_H
 
+#include "item.h"
 #include "entity.h"
 
+using std::vector;
 
 class Actor : public Entity
 {
@@ -12,8 +14,11 @@ class Actor : public Entity
 
         Controller * getController();
         void setController(Controller *);
+
+        string addItem(Item);
     protected:
     private:
+        vector<Item> inventory;
         Controller * controller;
 };
 

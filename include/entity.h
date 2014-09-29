@@ -23,9 +23,6 @@ class Entity
         sf::Vector2f getPosition() const;
         void setPosition(sf::Vector2f);
 
-        //Controller * getController();
-        //void setController(Controller *);
-
         virtual string toString() const = 0;
         virtual void update() = 0;
 
@@ -39,7 +36,6 @@ class Entity
         string name;
         int UUID;
         sf::Vector2f position;
-        //Controller * controller;
 
 };
 
