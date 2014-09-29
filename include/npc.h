@@ -7,7 +7,7 @@
 class NPC : public Entity
 {
     public:
-        NPC(Controller *, sf::Vector2f);
+        NPC(Controller *, sf::Vector2f, string);
         virtual ~NPC();
 
         void update();

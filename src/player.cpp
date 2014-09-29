@@ -1,6 +1,6 @@
 #include "player.h"
 
-Player::Player(Controller * c, sf::Vector2f position) : Entity(c, position)
+Player::Player(Controller * c, sf::Vector2f position, string name) : Entity(c, position, name)
 {
     //ctor
 }
@@ -13,7 +13,7 @@ void Player::update()
 string Player::toString() const
 {
     std::stringstream s;
-    s << "Placeholder" << " is a Player Entity with a position of: (" << getPosition().x << ", " << getPosition().y << ")";
+    s << getName() << " is a Player Entity with a position of: (" << getPosition().x << ", " << getPosition().y << ") and a UUID of " << getUUID();
     return s.str();
 }
 

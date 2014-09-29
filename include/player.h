@@ -7,7 +7,7 @@
 class Player : public Entity
 {
     public:
-        Player(Controller *, sf::Vector2f);
+        Player(Controller *, sf::Vector2f, string);
         virtual ~Player();
 
         void update();

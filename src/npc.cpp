@@ -1,6 +1,6 @@
 #include "npc.h"
 
-NPC::NPC(Controller * c, sf::Vector2f position) : Entity(c, position)
+NPC::NPC(Controller * c, sf::Vector2f position, string name) : Entity(c, position, name)
 {
 
 }
@@ -13,7 +13,7 @@ void NPC::update()
 string NPC::toString() const
 {
     std::stringstream s;
-    s << "Placeholder" << " is an NPC Entity with a position of: (" << getPosition().x << ", " << getPosition().y << ")";
+    s << getName() << " is an NPC Entity with a position of: (" << getPosition().x << ", " << getPosition().y << ") and a UUID of " << getUUID();
     return s.str();
 }
 
