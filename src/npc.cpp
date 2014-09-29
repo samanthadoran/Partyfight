@@ -1,6 +1,6 @@
 #include "npc.h"
 
-NPC::NPC(Controller * c, sf::Vector2f position, string name) : Entity(c, position, name)
+NPC::NPC(Controller * c, sf::Vector2f position, string name) : Actor(c, position, name)
 {
 
 }

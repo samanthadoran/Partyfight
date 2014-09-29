@@ -12,7 +12,7 @@ using std::string;
 class Entity
 {
     public:
-        Entity(Controller *, sf::Vector2f, string);
+        Entity(sf::Vector2f, string);
         virtual ~Entity();
 
         int getUUID() const;
@@ -23,13 +23,15 @@ class Entity
         sf::Vector2f getPosition() const;
         void setPosition(sf::Vector2f);
 
-        Controller * getController();
-        void setController(Controller *);
-
-        void move(sf::Vector2f);
+        //Controller * getController();
+        //void setController(Controller *);
 
         virtual string toString() const = 0;
         virtual void update() = 0;
+
+    protected:
+        void move(sf::Vector2f);
+
     private:
         static int currUUID;
         static int generateUUID();
@@ -37,7 +39,7 @@ class Entity
         string name;
         int UUID;
         sf::Vector2f position;
-        Controller * controller;
+        //Controller * controller;
 
 };
 

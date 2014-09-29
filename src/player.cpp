@@ -1,6 +1,6 @@
 #include "player.h"
 
-Player::Player(Controller * c, sf::Vector2f position, string name) : Entity(c, position, name)
+Player::Player(Controller * c, sf::Vector2f position, string name) : Actor(c, position, name)
 {
     //ctor
 }
